@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+  /*outline: 1px solid red;*/
+}
+body{
+    font-family: Verdana;
+    color: lightblue;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.player{
+ 
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    height: 100vh;
+
+
+}
+header{
+    background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+
+    width: 640px;
+    display: flex;
+    justify-content: space-around;
+    
+    font-size: 25px;
+}
+main{
+/*    margin: 0 10px 0 10px;*/
+    width: 50vw;
+    background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    display: flex;
+    justify-content:space-between ;
+    flex-direction: row;
+    flex-grow: 1;
+
+}
+
+.tracks{ /*section*/
+    /*background-color:#34495e ;*/
+    display: flex;
+    /*flex-grow:1;*/
+    flex-direction: column;
+}
+section:last-child{
+    /*background-color:#34495e ;*/
+    display: flex;
+    /*flex-grow: 1;*/
+    flex-direction: column;
+}
+.individul-track{
+    /*background-color: slategrey;*/
+    display: flex;
+   /*justify-content: space-around;*/
+    flex-direction: row;
+    flex-grow:1;
+    align-items: center;
+    margin: 0 0 0 25px;
+    border-radius: 1vw;
+}
+.images{
+    margin: 5px;
+     align-items: center;
+}
+.singer{
+    margin-left: 10px;
+    width: 15vw;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /*justify-content: flex-start;*/
+}
+.song-name{
+    color: goldenrod;
+    font-size: 10px;
+}
+.icon{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+
+ }
+.song-info{
+    /*margin-top: 30px;*/
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content:space-around;
+    align-items: center;
+}
+.image1{
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 30px 0 30px;
+    /*flex: 1;*/
+ }
+.song-slider{
+    width: 170px;
+    margin: 0 5px 0 5px;
+}
+.time-line{
+    display: flex;
+    flex: 1;
+    justify-content:center;
+    align-items: center;
+}
+
+.current-time{
+    font-size: 10px;
+    
+}
+.duration{
+    font-size: 10px;
+}
+ 
+
+.knappar{
+    display: flex;
+    /*flex-direction: row;*/
+    /*height:5vh;*/
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+}
+.play{
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
