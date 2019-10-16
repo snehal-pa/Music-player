@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet"
+        href="file:///C:/Users/Snehal%20Patel/Desktop/ECU/HTML-CSS/fontawesome-free-5.11.2-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+</head>
+
+<body>
+    <section class="player">
+        <header>
+            <i class="fas fa-chevron-left"></i>
+            <span>Playlist moody</span>
+            <i class="fas fa-ellipsis-v"></i>
+        </header>
+        <main>
+            <section class="tracks">
+                <section class="individul-track">
+                    <div class="images">
+                        <img src="images/image1.jpg" alt="" style="width: 60px; height: 60px;">
+                    </div>
+
+                    <div class="songTitle">
+                        <span class="movie"> Cocktail</span>
+                        <span class="song-title">Tumhi ho bandhu</span>
+
+                    </div>
+                    <div class="icon"><i class="fas fa-play-circle"></i></div>
+
+
+                </section>
+                <section class="individul-track">
+                    <div class="images">
+                        <img id="poster" src="images/image2.jpg" alt="" style="width: 60px; height: 60px;">
+                    </div>
+
+                    <div class="songTitle">
+                        <span class="movie">Padmavat</span>
+                        <span class="song-title">Ghumar</span>
+
+                    </div>
+                    <div class="icon"><i class="fas fa-play-circle"></i></div>
+
+
+                </section>
+                <section class="individul-track">
+                    <div class="images">
+                        <img src="images/image3.jpg" alt="" style="width: 60px; height: 60px;">
+                    </div>
+
+                    <div class="songTitle">
+                        <span class="movie">Happy New Year</span>
+                        <span class="song-title">India Wale</span>
+
+                    </div>
+                    <div class="icon"><i class="fas fa-play-circle"></i></div>
+
+
+                </section>
+                <section class="individul-track">
+                    <div class="images">
+                        <img src="images/image4.jpg" alt="" style="width: 60px; height: 60px;">
+                    </div>
+
+                    <div class="songTitle">
+                        <span class="movie">War</span>
+                        <span class="song-title">Ghoonghroo</span>
+
+                    </div>
+                    <div class="icon"><i class="fas fa-play-circle"></i></div>
+
+
+                </section>
+                <section class="individul-track">
+                    <div class="images">
+                        <img src="images/image5.jpg" alt="" style="width: 60px; height: 60px;">
+                    </div>
+
+                    <div class="songTitle">
+                        <span class="movie">Desi boys</span>
+                        <span class="song-title">Make some noise</span>
+
+                    </div>
+                    <div class="icon"><i class="fas fa-play-circle"></i></div>
+
+
+                </section>
+                <section class="individul-track">
+                    <div class="images">
+                        <img src="images/image6.jpg" alt="" style="width: 60px; height: 60px;">
+                    </div>
+
+                    <div class="songTitle">
+                        <span class="movie">Batla-House</span>
+                        <span class="song-title">Saki-saki</span>
+
+                    </div>
+                    <div class="icon"><i class="fas fa-play-circle"></i></div>
+
+
+                </section>
+
+            </section>
+            <section>
+                <div id="image1">
+                    <img src="images/image1.jpg" alt="" style="width:100%; height:100%;">
+                </div>
+                <div class=" song-info">
+                    <button id="plus"><i class="fas fa-plus-circle"></i></button>
+                    <div class="songAndMovieName">
+                        <span id="movie"> Cocktail</span>
+                        <span id="song-title">Tumhi ho bandhu</span>
+
+                    </div>
+                    <button id="heart"><i class="fas fa-heart"></i></button>
+                </div>
+                <div class="time-line">
+                    <div id="currentTime" class="current-time">00:00</div>
+
+                    <input id="songSlider" class="song-slider" type="range" min="0" step="1"
+                        onchange="slideTheSong()" />
+                    <div id="duration" class="duration">00:00</div>
+
+                </div>
+
+                <div class="buttons">
+                    <button id="redo" onclick="playSong()"> <i class="fas fa-redo"></i></button>
+                    <div class="play">
+                        <button id="pre" onclick="previous()"><i class="fas fa-backward"></i></button>
+                        <button id="play" onclick="playOrPause()"><i id="play1" class="fas fa-play"></i></button>
+                        <button id="next" onclick="next()"><i class="fas fa-forward"></i></button>
+
+                    </div>
+                    <button id="random"><i class="fas fa-random"></i></button>
+                </div>
+
+            </section>
+        </main>
+
+    </section>
+    <script type="text/javascript" src="player.js"></script>
+
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-  /*outline: 1px solid red;*/
+    /*outline: 1px solid red;*/
 }
 body{
     font-family: Verdana;
@@ -8,6 +8,7 @@ body{
     text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 .player{
+    background: #f3ebdc;
  
     display: flex;
     align-items:center;
@@ -19,7 +20,7 @@ body{
 header{
     background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
 
-    width: 640px;
+    width: 50vw;
     display: flex;
     justify-content: space-around;
     
@@ -48,7 +49,7 @@ section:last-child{
     /*flex-grow: 1;*/
     flex-direction: column;
 }
-.individul-track{
+section.individul-track{
     /*background-color: slategrey;*/
     display: flex;
    /*justify-content: space-around;*/
@@ -57,12 +58,16 @@ section:last-child{
     align-items: center;
     margin: 0 0 0 25px;
     border-radius: 1vw;
+    cursor:pointer ;
+}
+.individul-track:hover{
+    background-color:#16d6e41a;
 }
 .images{
     margin: 5px;
-     align-items: center;
+    align-items: center;
 }
-.singer{
+.songTitle{
     margin-left: 10px;
     width: 15vw;
     float: right;
@@ -70,10 +75,6 @@ section:last-child{
     flex-direction: column;
     align-items: flex-start;
     /*justify-content: flex-start;*/
-}
-.song-name{
-    color: goldenrod;
-    font-size: 10px;
 }
 .icon{
     display: flex;
@@ -89,11 +90,34 @@ section:last-child{
     justify-content:space-around;
     align-items: center;
 }
-.image1{
+.songAndMovieName{
+    display: flex;
+    flex-direction: column;
+}
+#movie{
+    width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*align-self: center;*/
+
+}
+#song-title{
+    color: goldenrod;
+    font-size: 10px;
+}
+.song-title{
+    color: goldenrod;
+    font-size: 10px;
+}
+
+#image1{
+    width: 20vw;
+    height: 50vh;
     flex-direction: column;
     justify-content: space-around;
     margin: 20px 30px 0 30px;
-    /*flex: 1;*/
+    /*flex: 3;*/
  }
 .song-slider{
     width: 170px;
@@ -115,7 +139,7 @@ section:last-child{
 }
  
 
-.knappar{
+.buttons{
     display: flex;
     /*flex-direction: row;*/
     /*height:5vh;*/
@@ -123,8 +147,28 @@ section:last-child{
     justify-content: space-evenly;
     flex: 1;
 }
-.play{
-    width: 90px;
-    display: flex;
-    justify-content: space-between;
+.buttons:hover{
+    background-color:#11dd1b1a;
 }
+.play{
+    justify-content: space-around;
+}
+#play{
+    background-color: white;
+    font-size: 40px;
+    border-radius: 50%;
+}
+#pre{
+    background-color: white;
+}
+#next{
+    background-color: white;
+}
+#heart{
+    background-color: white;
+}
+#plus{
+    background-color: white;
+}
+
+
