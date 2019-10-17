@@ -19,13 +19,24 @@ function setSongSrc() {
     audio.src = "songs/" + songs[currentSong];
     songName.textContent = songs[currentSong];
     movieName.textContent = movies[currentSong];
+    $("#image1 img").attr("src", "images/" + pictures[currentSong]);
+    setTimeout(showDuration, 1000);
+    $(".individual-track").click(function () {
+        $(".individual-track").eq(currentSong).removeClass("red");
+        currentSong = $(this).index();
+        playSong();
+
+    })
 }
 
 function playSong() {
     setSongSrc();
     audio.play();
-    setTimeout(showDuration, 1000);
+
     $(play).removeClass('fa-play').addClass('fa-pause');
+    //$(".individual-track").eq(currentSong).css("background-color","red");
+    $(".individual-track").eq(currentSong).addClass("red");
+
 }
 setInterval(updateSongSlider, 1000);
 
@@ -50,31 +61,34 @@ function playOrPause() {
     $(play).toggleClass('fa-play').toggleClass('fa-pause');
 
     if (audio.paused) {
-        audio.play();
+        playSong();
+        //audio.play();
+        audio.addEventListener("ended", next)
+
     }
     else {
         audio.pause();
     }
 }
 function next() {
+    $(".individual-track").eq(currentSong).removeClass("red");
     currentSong++;
     if (currentSong > songs.length - 1) {
         currentSong = 0;
     }
     playSong();
-    $("#image1 img").attr("src", "images/" + pictures[currentSong]);
 
 }
 function previous() {
+    $(".individual-track").eq(currentSong).removeClass("red");
     currentSong--;
     if (currentSong < 0) {
         currentSong = songs.length - 1;
     }
     playSong();
-    $("#image1 img").attr("src", "images/" + pictures[currentSong]);
 
 }
-function slideTheSong(){
+function slideTheSong() {
     audio.currentTime = songSlider.value;
     currentTime.textContent = convertMins(audio.currentTime);
 }
