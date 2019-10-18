@@ -1,11 +1,11 @@
-let songs = ["song1.mp3", "song2.mp3", "song3.mp3", "song4.mp3", "song5.mp3", "song6.mp3"];
+let songs = ["Tumhi ho bandhu", "Ghumar", "India Wale", "Ghoonghroo", "Make some noise", "Saki-saki"];
 let pictures = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg", "image6.jpg"];
 let movies = ["Cocktail", "Padmavat", "Happy New Year", "War", "Desi boys", "Batla-House"];
 
 let movieName = document.getElementById('movie');
 let songName = document.getElementById('song-title');
 let songSlider = document.getElementById('songSlider');
-let currenTime = document.getElementById('currenTime');
+let currenTime = document.getElementById('currentTime');
 let duration = document.getElementById('duration');
 let play = document.getElementById('play1');
 
@@ -21,12 +21,12 @@ function setSongSrc() {
     movieName.textContent = movies[currentSong];
     $("#image1 img").attr("src", "images/" + pictures[currentSong]);
     setTimeout(showDuration, 1000);
-    $(".individual-track").click(function () {
+   /* $(".individual-track").click(function () {
         $(".individual-track").eq(currentSong).removeClass("red");
         currentSong = $(this).index();
         playSong();
 
-    })
+    })*/
 }
 
 function playSong() {
@@ -38,12 +38,19 @@ function playSong() {
     $(".individual-track").eq(currentSong).addClass("red");
 
 }
+$(".individual-track").click(function () {
+    $(".individual-track").eq(currentSong).removeClass("red");
+    currentSong = $(this).index();
+    playSong();
+
+})
+
 setInterval(updateSongSlider, 1000);
 
 function updateSongSlider() {
     let c = Math.round(audio.currentTime);
     songSlider.value = c;
-    currentTime.textContent = convertMins(c);
+    currenTime.textContent = convertMins(c);
 }
 function convertMins(secs) {
     let min = Math.floor(secs / 60);
@@ -59,10 +66,11 @@ function showDuration() {
 }
 function playOrPause() {
     $(play).toggleClass('fa-play').toggleClass('fa-pause');
+    $(".individual-track").eq(currentSong).addClass("red");
 
     if (audio.paused) {
-        playSong();
-        //audio.play();
+        //playSong();
+         audio.play();
         audio.addEventListener("ended", next)
 
     }
@@ -80,16 +88,22 @@ function next() {
 
 }
 function previous() {
-    $(".individual-track").eq(currentSong).removeClass("red");
-    currentSong--;
-    if (currentSong < 0) {
-        currentSong = songs.length - 1;
+    if(Math.round(audio.currentTime) < 5){
+        //alert(audio.currentTime);
+        $(".individual-track").eq(currentSong).removeClass("red");
+        currentSong--;
+        if (currentSong < 0) {
+            currentSong = songs.length - 1;
+        }
+        playSong();
+    
+    }else{
+        playSong();
     }
-    playSong();
 
 }
 function slideTheSong() {
     audio.currentTime = songSlider.value;
-    currentTime.textContent = convertMins(audio.currentTime);
+    currenTime.textContent = convertMins(audio.currentTime);
 }
 
