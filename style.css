@@ -2,14 +2,16 @@
     box-sizing: border-box;
     /*outline: 1px solid red;*/
 }
-body{
+/*body{
     font-family: Verdana;
     color: lightblue;
     text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
-}
+}*/
 .player{
-    background: #f3ebdc;
- 
+    font-family: Verdana;
+    color: lightblue;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+
     display: flex;
     align-items:center;
     flex-direction: column;
@@ -19,11 +21,9 @@ body{
 }
 header{
     background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-
     width: 50vw;
     display: flex;
     justify-content: space-around;
-    
     font-size: 25px;
 }
 main{
@@ -38,14 +38,12 @@ main{
 }
 
 .tracks{ /*section*/
-    /*background-color:#34495e ;*/
     display: flex;
     /*flex-grow:1;*/
     flex-direction: column;
 }
 section:last-child{
 
-    /*background-color:#34495e ;*/
     display: flex;
     /*flex-grow: 1;*/
     flex-direction: column;
@@ -61,7 +59,7 @@ section.individual-track{
     cursor:pointer ;
 }
 .individual-track:hover{
-    background-color:purple;
+    background-color:#12c2201a;
 }
 .images{
     margin: 5px;
@@ -74,8 +72,7 @@ section.individual-track{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /*justify-content: flex-start;*/
-}
+ }
 .icon{
     display: flex;
     align-items:center;
@@ -154,18 +151,26 @@ section.individual-track{
     justify-content: space-around;
 }
 #play{
-    background-color:lightskyblue;
+    color:lightskyblue;
     font-size: 40px;
-    /*border-radius: 50%;*/
+    background-color:transparent;
+    border: transparent;
+    margin-top: 5px;
+    border-radius: 30%;
 }
 #pre, #next, #heart, #plus, #redo, #random {
-    background-color: white;
-    border-radius: 60%;
-    background-color: lightskyblue;
+    color:lightskyblue;
+    border-radius: 30%;
+    background-color: rgba(0, 0, 0, 0);
+    border: transparent;
 
 }
 .red{
-    background-color: red;
+    background-color:purple;
 }
+#pre, #next{
+    margin-bottom: 15px;
+    font-size: 30px;
+   }
 
 
