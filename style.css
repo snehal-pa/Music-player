@@ -2,11 +2,6 @@
     box-sizing: border-box;
     /*outline: 1px solid red;*/
 }
-/*body{
-    font-family: Verdana;
-    color: lightblue;
-    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
-}*/
 .player{
     font-family: Verdana;
     color: lightblue;
@@ -27,7 +22,6 @@ header{
     font-size: 25px;
 }
 main{
-/*    margin: 0 10px 0 10px;*/
     width: 50vw;
     background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
     display: flex;
@@ -50,7 +44,6 @@ section:last-child{
 }
 section.individual-track{
     display: flex;
-   /*justify-content: space-around;*/
     flex-direction: row;
     flex-grow:1;
     align-items: center;
@@ -65,6 +58,11 @@ section.individual-track{
     margin: 5px;
     align-items: center;
 }
+.song-title{
+    color: goldenrod;
+    font-size: 10px;
+}
+
 .songTitle{
     margin-left: 10px;
     width: 15vw;
@@ -80,7 +78,6 @@ section.individual-track{
 
  }
 .song-info{
-    /*margin-top: 30px;*/
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -88,33 +85,21 @@ section.individual-track{
     align-items: center;
 }
 .songAndMovieName{
+
     display: flex;
     flex-direction: column;
-}
-#movie{
-    width: 150px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    /*align-self: center;*/
-
+    align-items: center;
 }
 #song-title{
     color: goldenrod;
     font-size: 10px;
 }
-.song-title{
-    color: goldenrod;
-    font-size: 10px;
-}
-
 #image1{
     width: 20vw;
     height: 50vh;
     flex-direction: column;
     justify-content: space-around;
     margin: 20px 30px 0 30px;
-    /*flex: 3;*/
  }
 .song-slider{
     width: 170px;
@@ -135,15 +120,13 @@ section.individual-track{
     font-size: 10px;
 }
  
-
 .buttons{
     display: flex;
-    /*flex-direction: row;*/
-    /*height:5vh;*/
     align-items: center;
     justify-content: space-evenly;
     flex: 1;
 }
+
 .buttons:hover{
     background-color:#11dd1b1a;
 }
